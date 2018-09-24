@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://servico/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servico/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="adicionarEstoqueProduto" type="tns:adicionarEstoqueProduto"/>
+
+<xs:element name="adicionarEstoqueProdutoResponse" type="tns:adicionarEstoqueProdutoResponse"/>
+
+<xs:element name="adicionarProduto" type="tns:adicionarProduto"/>
+
+<xs:element name="adicionarProdutoResponse" type="tns:adicionarProdutoResponse"/>
+
+<xs:element name="baixarEstoqueProduto" type="tns:baixarEstoqueProduto"/>
+
+<xs:element name="baixarEstoqueProdutoResponse" type="tns:baixarEstoqueProdutoResponse"/>
+
+<xs:element name="buscarProdutoPorCodigo" type="tns:buscarProdutoPorCodigo"/>
+
+<xs:element name="buscarProdutoPorCodigoResponse" type="tns:buscarProdutoPorCodigoResponse"/>
+
+<xs:element name="contadorProduto" type="tns:contadorProduto"/>
+
+<xs:element name="contadorProdutoResponse" type="tns:contadorProdutoResponse"/>
+
+<xs:element name="listaProduto" type="tns:listaProduto"/>
+
+<xs:element name="listaProdutoResponse" type="tns:listaProdutoResponse"/>
+
+<xs:element name="removerProduto" type="tns:removerProduto"/>
+
+<xs:element name="removerProdutoResponse" type="tns:removerProdutoResponse"/>
+
+<xs:element name="totalEstoqueFisico" type="tns:totalEstoqueFisico"/>
+
+<xs:element name="totalEstoqueFisicoResponse" type="tns:totalEstoqueFisicoResponse"/>
+
+<xs:complexType name="baixarEstoqueProduto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:produtoVO" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="produtoVO">
+<xs:sequence>
+<xs:element name="codigo" type="xs:int"/>
+<xs:element name="estoque" type="xs:int"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="baixarEstoqueProdutoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adicionarEstoqueProduto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:produtoVO" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adicionarEstoqueProdutoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="removerProduto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:produtoVO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removerProdutoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="totalEstoqueFisico">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="totalEstoqueFisicoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProdutoPorCodigo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProdutoPorCodigoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:produtoVO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adicionarProduto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:produtoVO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="adicionarProdutoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="contadorProduto">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="contadorProdutoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaProduto">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="listaProdutoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:produtoVO" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
